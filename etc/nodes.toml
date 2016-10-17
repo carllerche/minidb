@@ -1,0 +1,19 @@
+
+default_action = "allow"
+
+#
+# List out the nodes
+#
+
+[[node]]
+id = 1
+port = 5981
+
+# routes = [
+#     { destination = 2, action = "allow" },
+#     { destination = 2, action = "delay" },
+# ]
+
+[[node]]
+id = 2
+port = 5982

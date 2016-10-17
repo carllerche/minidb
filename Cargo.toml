@@ -1,0 +1,47 @@
+[package]
+name = "minidb"
+version = "0.1.0"
+authors = ["Carl Lerche <me@carllerche.com>"]
+
+[[bin]]
+name = "minidb"
+doc = false
+
+[[bin]]
+name = "minidb-cli"
+doc = false
+
+[dependencies]
+
+# Manage asynchronous operations using futures
+futures = "0.1"
+tokio-core = "0.1"
+tokio-proto = { git = "https://github.com/tokio-rs/tokio-proto" }
+tokio-timer = { git = "https://github.com/tokio-rs/tokio-timer" }
+tokio-service = { git = "https://github.com/tokio-rs/tokio-service" }
+
+bytes = { git = "https://github.com/carllerche/bytes" }
+
+# Protobuf (serialization / deserialization). Used for the protocol
+buffoon = { git = "https://github.com/carllerche/buffoon" }
+
+byteorder = "0.5"
+
+# Log output
+log = "0.3"
+
+# Used for the configuration file
+toml = "0.2.1"
+
+# Used to parse CLI arguments
+docopt = "0.6"
+
+rand = "0.3."
+
+env_logger = "0.3"
+
+[dev-dependencies]
+quickcheck = "0.3"
+rand = "0.3"
+
+fixture-io = { git = "https://github.com/carllerche/fixture-io" }
